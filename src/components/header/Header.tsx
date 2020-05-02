@@ -1,7 +1,7 @@
 import React, {FunctionComponent} from 'react';
 import Button from "../button/Button";
 import styles from './header.module.scss';
-
+import {useLaunchesContext} from "../../context/LaunchesContext";
 import refreshIcon from '../../assets/icon/refresh@2x.png'
 
 type Props = {
@@ -11,6 +11,8 @@ type Props = {
 }
 
 const Header: FunctionComponent<Props> = ({logo, onReload, title}) => {
+    const {getLaunches} = useLaunchesContext();
+
     return (
         <header className={styles.header}>
             <div>
@@ -20,7 +22,10 @@ const Header: FunctionComponent<Props> = ({logo, onReload, title}) => {
 
 
             <div>
-                <Button iconSrc={refreshIcon}>Reload Data</Button>
+                <Button
+                    onClick={() => getLaunches()}
+                    className={styles['header-button']}
+                    iconSrc={refreshIcon}>Reload Data</Button>
             </div>
         </header>
     );

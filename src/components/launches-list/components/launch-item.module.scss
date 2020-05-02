@@ -1,0 +1,32 @@
+@import "src/styles/variables";
+
+.item {
+  display: flex;
+  align-items: center;
+  box-shadow: $box-shadow;
+  padding: 16px 16px 16px 32px;
+  margin-bottom: 8px;
+  border-radius: 8px;
+
+  &-number {
+    width: 20%;
+    font-size: 40px;
+    font-weight: 200;
+  }
+
+  &-name {
+    margin: 0 5px;
+    width: 60%;
+    font-size: 32px;
+    font-weight: 500;
+  }
+
+  &-date {
+    opacity: .7;
+  }
+
+  &-info {
+    font-weight: 700;
+    font-size: 24px;
+  }
+}
