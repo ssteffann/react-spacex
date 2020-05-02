@@ -1,0 +1,23 @@
+@import "src/styles/variables";
+
+.button {
+  padding: 10px 16px;
+  font-weight: 700;
+  cursor: pointer;
+  outline: none;
+
+  &-primary {
+    color: $primary-white;
+    background-color: $primary-blue;
+
+    &:hover {
+      background-color: lighten($primary-blue, 10%)
+    }
+  }
+
+  &-icon {
+    margin-left: 5px;
+    height: 13px;
+    vertical-align:middle;
+  }
+}

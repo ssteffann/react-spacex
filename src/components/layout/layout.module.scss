@@ -1,0 +1,30 @@
+@import "src/styles/variables";
+
+.layout {
+  display: flex;
+  margin: 40px 40px;
+
+  &-img-container {
+    width: 45%;
+    height: calc(100vh - 200px);
+    margin: 20px 20px 0 0;
+
+    background-size: contain;
+    background-position: center center;
+    background-repeat: no-repeat;
+  }
+
+  &-content {
+    width: 55%;
+  }
+
+  @media (max-width: $tablet-width) {
+    &-img-container {
+        display: none;
+    }
+
+    &-content {
+      width: 100%;
+    }
+  }
+}
